@@ -1,44 +1,71 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kalkulator BMI"
-        android:textSize="24sp"
-        android:textStyle="bold"
         android:gravity="center"
-        android:paddingBottom="24dp" />
+        android:paddingBottom="32dp"
+        android:text="Kalkulator BMI"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/inputBerat"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukkan Berat (kg)"
-        android:inputType="numberDecimal" />
+        android:layout_below="@+id/title"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="12dp"
+        android:padding="16dp"
+        app:cardBackgroundColor="#E0F2F1">
 
-    <EditText
-        android:id="@+id/inputTinggi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan Tinggi (cm)"
-        android:inputType="numberDecimal" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="279dp"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnHitungBMI"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hitung BMI" />
+            <EditText
+                android:id="@+id/inputBerat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Berat (kg)"
+                android:inputType="numberDecimal"
+                android:padding="12dp" />
 
-    <TextView
-        android:id="@+id/hasilBMI"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hasil BMI akan muncul di sini"
-        android:textSize="18sp"
-        android:paddingTop="24dp" />
+            <EditText
+                android:id="@+id/inputTinggi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Masukkan Tinggi (cm)"
+                android:inputType="numberDecimal"
+                android:padding="12dp" />
 
-</LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHitungBMI"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Hitung BMI"
+                app:backgroundTint="#26A69A" />
+
+            <TextView
+                android:id="@+id/hasilBMI"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Hasil BMI akan muncul di sini"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
