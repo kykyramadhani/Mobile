@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kalkulator BMI"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="24dp" />
+
+    <EditText
+        android:id="@+id/inputBerat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Berat (kg)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/inputTinggi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Tinggi (cm)"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnHitungBMI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hitung BMI" />
+
+    <TextView
+        android:id="@+id/hasilBMI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hasil BMI akan muncul di sini"
+        android:textSize="18sp"
+        android:paddingTop="24dp" />
+
+</LinearLayout>
