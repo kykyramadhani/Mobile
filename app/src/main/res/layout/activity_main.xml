@@ -10,15 +10,16 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingBottom="32dp"
-        android:text="Kalkulator BMI"
+        android:text="@string/title"
         android:textColor="@android:color/black"
         android:textSize="28sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="40dp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
+        android:layout_below="@id/title"
         app:cardCornerRadius="16dp"
         app:cardElevation="12dp"
         android:padding="16dp"
@@ -26,42 +27,48 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="279dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <EditText
                 android:id="@+id/inputBerat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Masukkan Berat (kg)"
+                android:hint="@string/hint_weight"
                 android:inputType="numberDecimal"
-                android:padding="12dp" />
+                android:padding="12dp"
+                android:importantForAutofill="yes"
+                android:autofillHints="weight" />
 
             <EditText
                 android:id="@+id/inputTinggi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:hint="Masukkan Tinggi (cm)"
+                android:hint="@string/hint_height"
                 android:inputType="numberDecimal"
-                android:padding="12dp" />
+                android:padding="12dp"
+                android:importantForAutofill="yes"
+                android:autofillHints="height" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnHitungBMI"
                 style="@style/Widget.MaterialComponents.Button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="24dp"
-                android:text="Hitung BMI"
-                app:backgroundTint="#26A69A" />
+                android:text="@string/btn_calculate"
+                app:backgroundTint="#26A69A"
+                android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/hasilBMI"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:gravity="center"
-                android:text="Hasil BMI akan muncul di sini"
+                android:text="@string/bmi_result"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 

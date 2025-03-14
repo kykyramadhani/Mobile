@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Tugas</string>
+    <string name="app_name">Kalkulator BMI</string>
+    <string name="title">Kalkulator BMI</string>
+    <string name="hint_weight">Masukkan Berat (kg)</string>
+    <string name="hint_height">Masukkan Tinggi (cm)</string>
+    <string name="btn_calculate">Hitung BMI</string>
+    <string name="bmi_result">Hasil BMI akan muncul di sini</string>
 </resources>
